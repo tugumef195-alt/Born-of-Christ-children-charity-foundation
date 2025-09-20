@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Born of christ children foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --secondary: #3b82f6;
+            --accent: #22d3ee;
+             --accent1: #40ff6a;
+              --accent2: #0066ff;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            height: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgb(190, 180, 180);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.959)
+
+           
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+       color: var(--primary);
+             text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.959)
+           
+        }
+        
+        .logo-icon {
+          
+            
+            font-size: 2.8rem;
+             box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.959)
+        }
+       
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+             text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.658)
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+.logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-icon {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        
+
+
+
+
+
+
+        .active {
+            color: var(--primary);
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+         .hero {
+            background: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+            padding: 4rem 1rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+            color: rgb(219, 218, 218);
+            position: relative;
+        }
+        
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(76, 110, 245, 0.8), rgba(34, 184, 207, 0.8));
+        }
+        
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(12, 0, 0, 0.904);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.596);
+
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.596);
+        }
+        
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .service-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.856);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+
+        .stat-text {
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #eef2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+         
+
+
+
+  .btn {
+            display: inline-block;
+            background-color: #ffc814da;
+            color: rgb(248, 243, 243);
+            padding: 0.8rem 1.0rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.671);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.815);
+        }
+        
+      
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        #everything{
+            font-size: 30px;
+
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent1));
+            border-radius: 2px;
+        }
+        
+        .children-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .child-card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.473);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .child-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .child-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .child-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .child-card:hover .child-image img {
+            transform: scale(1.05);
+        }
+        
+        .child-info {
+            padding: 1.5rem;
+        }
+        
+        .child-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .child-info p {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .donate-btn {
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(to right, var(--accent2), var(--accent1));
+        }
+        
+        .donate-btn:hover {
+            background: linear-gradient(to right, var(--accent1), var(--accent2));
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        h1{
+
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.87);
+            font-size: 1.8rem;
+        }
+
+        h2{
+
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+        font-size: 1.2rem;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Page Content */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.09);
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+            }
+            
+            nav.show {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+   
+   </style>
+<link rel="shortcut icon" type="image/png" href="favicon/Charity Foundation Logo in Simple Modern Style.png" >
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+
+             <img src="logo/Charity Foundation Logo in Simple Modern Style.png" >
+                    <span class="logo-text">Born Of christ Children Foundation</span>
+            
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#services" class="nav-link">Our childern</a></li>
+                          <li><a href="#portfolio" class="nav-link">Achivements</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                     
+                         <li><a href="#about" class="nav-link">About Us</a></li>
+                          <li><a href="link tree/link tree.html" class="btn"  >Donate Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bring hope and Love to Children in Need</h1>
+                    <p i id="everything">Every child deserves a chance to thrive. Join us in making a difference in lives of vulnerable children through compassion and support. </p>
+                    <a href="link tree/link tree.html"  class="btn"> Donate to us</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Who are we?</h2>
+                    <p>We are a non-profitable organization in Uganda that came out to help children in need with basic needs, 
+                        re-settling homeless children and look for foreign aid to support the children.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Legitment</h3>
+                            <p>we are regesterd with the Uganda National Bureau for NGOs as a trusted organisation to 
+                            help children. </p>
+                            <a href="#services" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Our Team</h3>
+                            <p>we work as a team of Four comitted people and thats Frank, Mark, Daglous and kim to delever help to the needy </p>
+                            <a href="#about" class="btn">Meet Our Team</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Partnership</h3>
+                            <p>We work......</p>
+                            <a href="#contact" class="btn">Partner With Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Children</h2>
+                    <p>Meet our childre needing support.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                      <div class="child-image">
+                    <img src="born of christ images/sarah.jpg" alt="Child 1">
+                </div>
+                <div class="child-info">
+                    <h3>Sarah, 6 yrs</h3>
+                    <p>Sarah loves drawing and dreams of becoming an artist. She needs support for her education and art supplies.</p>
+                  <a href="madia file/madia 1.html"> <button class="btn donate-btn">view sarah</button> </a>
+            
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- child 2 -->
+            <div class="child-card">
+                <div class="child-image" onclick="openModal('modal2')">
+                    <img src="born of christ images/michael.jpg" alt="Child 2">
+                </div>
+                <div class="child-info">
+                    <h3>Michael, 3 yrs</h3>
+                    <p>Michael is passionate about soccer. He needs support for school fees and sports equipment.</p>
+                    <button  class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 3 -->
+            <div class="child-card" onclick="openModal('modal3')">
+                <div class="child-image">
+                    <img src="born of christ images/grace.jpg" alt="Child 3">
+                </div>
+                <div class="child-info">
+                    <h3>sophia, 3 yrs</h3>
+                    <p>Grace loves singing and dancing. She needs support for her education and musical development.</p>
+                    <a href="madia file/madia 1.html" class="btn donate-btn">view more</a>
+                </div>
+            </div>
+
+            <!-- Child 4 -->
+            <div class="child-card" >
+                <div class="child-image"onclick="openModal('modal4')" >
+                    <img src="born of christ images/david.jpg" alt="Child 4">
+                </div>
+                <div class="child-info">
+                    <h3>David, 2 yrs</h3>
+                    <p>David is curious about science. He needs support for his education and science learning materials.</p>
+                   <a href="madia file/madia 1.html" > <button class="btn donate-btn">View David</button></a>
+                </div>
+            </div>
+
+            <!-- Child 5 -->
+            <div class="child-card"onclick="openModal('modal5')">
+                <div class="child-image">
+                    <img src="born of christ images/emma.jpg" alt="Child 5">
+                </div>
+                <div class="child-info">
+                    <h3>Emma, 3 yrs</h3>
+                    <p>Emma enjoys reading and storytelling. She needs support for her education and books.</p>
+                    <button class="btn donate-btn">view more</button>
+                </div>
+            </div>
+
+            <!-- Child 6 -->
+            <div class="child-card"onclick="openModal('modal6')" >
+                <div class="child-image">
+                    <img src="born of christ images/james.jpg" alt="Child 6">
+                </div>
+                <div class="child-info">
+                    <h3>James,4 yrs & mark, 5 yrs</h3>
+                    <p>James loves animals and nature. while mark loves playing . Both need support for their education and outdoor learning activities.</p>
+                   <a href="madia file/madia 1.html"> <button class="btn donate-btn">view more</button></a>
+                </div>
+            </div>
+
+            <!-- Child 7 -->
+            <div class="child-card"onclick="openModal('modal7')" >
+                <div class="child-image">
+                    <img src="born of christ images/sophia.jpg" alt="Child 7">
+                </div>
+                <div class="child-info">
+                    <h3>Sophia, 9 yrs</h3>
+                    <p>Sophia is talented in mathematics. She needs support for her education and advanced learning materials.</p>
+                     <a href="madia file/madia 1.html"> <button class="btn donate-btn">view more</button></a>
+                </div>
+            </div>
+           
+
+            <!-- Child 8 -->
+            <div class="child-card"onclick="openModal('modal8')">
+                <div class="child-image">
+                    <img src="born of christ images/daniel.jpg" alt="Child 8">
+                </div>
+                <div class="child-info">
+                    <h3>Daniel, 8 yrs</h3>
+                    <p>Daniel enjoys building things. He needs support for his education and construction toys.</p>
+                     <a href="madia file/madia 1.html"><button class="btn donate-btn">view more</button></a>
+                </div>
+            </div>
+
+           <!-- Child 8 -->
+            <div class="child-card"onclick="openModal('modal9')">
+                <div class="child-image">
+                    <img src="born of christ images/daniel.jpg" alt="Child 8">
+                </div>
+                <div class="child-info">
+                    <h3>Daniel, 8 yrs</h3>
+                    <p>Daniel enjoys building things. He needs support for his education and construction toys.</p>
+                     <a href="madia file/madia 1.html"> <button class="btn donate-btn">view more</button></a>
+                </div>
+            </div>
+
+
+
+            <!-- Child 10 -->
+            <div class="child-card"onclick="openModal('modal10')" >
+                <div class="child-image">
+                    <img src="newborn/ethan.jpg" alt="Child 10">
+                </div>
+                <div class="child-info">
+                    <h3>Ethan, 6 yrs</h3>
+                    <p>Ethan is interested in technology. He needs support for his education and computer access.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 11 -->
+            <div class="child-card"onclick="openModal('modal11')">
+                <div class="child-image">
+                    <img src="newborn/eve - Copy.jpg" alt="Child 11">
+                </div>
+                <div class="child-info">
+                    <h3>Ava, 5 yrs</h3>
+                    <p>Ava enjoys helping others. She needs support for her education and community activities.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 12 -->
+            <div class="child-card"onclick="openModal('modal12')" >
+                <div class="child-image">
+                    <img src="newborn/noah.jpg" alt="Child 12">
+                </div>
+                <div class="child-info">
+                    <h3>Noah, 9 yrs</h3>
+                    <p>Noah loves exploring and adventures. He needs support for his education and exploration tools.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 13 -->
+            <div class="child-card"onclick="openModal('modal13')">
+                <div class="child-image">
+                    <img src="newborn/mia.jpg" alt="Child 13">
+                </div>
+                <div class="child-info">
+                    <h3>Mia, 5 yrs</h3>
+                    <p>Mia is creative with crafts. She needs support for her education and craft materials.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 14 -->
+            <div class="child-card"onclick="openModal('modal14')">
+                <div class="child-image">
+                    <img src="newborn/liam.jpg" alt="Child 14">
+                </div>
+                <div class="child-info">
+                    <h3>Liam, 7 yrs</h3>
+                    <p>Liam enjoys music and playing instruments. He needs support for his education and music lessons.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 15 -->
+            <div class="child-card"onclick="openModal('modal15')">
+                <div class="child-image">
+                    <img src="newborn/isabella.jpg" alt="Child 15">
+                </div>
+                <div class="child-info">
+                    <h3>Isabella, 5 yrs</h3>
+                    <p>Isabella loves cooking and baking. She needs support for her education and cooking classes.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 16 -->
+            <div class="child-card"onclick="openModal('modal16')">
+                <div class="child-image">
+                    <img src="newborn/lucas.jpg" alt="Child 16">
+                </div>
+                <div class="child-info">
+                    <h3>Lucas, 4 yrs</h3>
+                    <p>Lucas is interested in astronomy. He needs support for his education and telescope access.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 17 -->
+            <div class="child-card">
+                <div class="child-image">
+                    <img src="newborn/amilia.jpg" alt="Child 17">
+                </div>
+                <div class="child-info">
+                    <h3>Amelia, 4 yrs</h3>
+                    <p>Amelia enjoys dressing up and storytelling. She needs support for her education and creative play.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 18 -->
+            <div class="child-card">
+                <div class="child-image">
+                    <img src="newborn/benjamin.jpg" alt="Child 18">
+                </div>
+                <div class="child-info">
+                    <h3>Benjamin, 6 yrs</h3>
+                    <p>Benjamin loves puzzles and problem-solving. He needs support for his education and puzzle games.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            <!-- Child 19 -->
+            <div class="child-card">
+                <div class="child-image">
+                    <img src="newborn/chalorate.jpg" alt="Child 19">
+                </div>
+                <div class="child-info">
+                    <h3>Charlotte, 15 yrs</h3>
+                    <p>Charlotte is fascinated by marine life. She needs support for her education and aquarium visits.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+
+            
+            <!-- Child 20 -->
+            <div class="child-card">
+                <div class="child-image">
+                    <img src="newborn/hennery.jpg" alt="Child 20">
+                </div>
+                <div class="child-info">
+                    <h3>Henry, 9 yrs</h3>
+                    <p>Henry enjoys history and ancient civilizations. He needs support for his education and museum visits.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+            </div>
+        
+         <!-- Child 19 -->
+            <div class="child-card">
+                <div class="child-image">
+                    <img src="newborn/chalorate.jpg" alt="Child 19">
+                </div>
+                <div class="child-info">
+                    <h3>Charlotte, 15 yrs</h3>
+                    <p>Charlotte is fascinated by marine life. She needs support for her education and aquarium visits.</p>
+                    <button class="btn donate-btn">Donate Now</button>
+                </div>
+        </div>  
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Learn about our journey, values, and the team behind Charity.</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>We Drive Charity to generations</h2>
+                        <p> Born of crist we are most oriented on providing basic needs to the childern in need in th villeges and slums of uganda.</p>
+                       <p>The Christ Foundation is a non-profit organization that provides funding to support programs addressing pressing issues such as:
+- Child Hunger: Providing essential resources to children in need
+- Homelessness: Supporting initiatives </p>
+                       <p></p>
+                       
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">9+</div>
+                                <div class="stat-text">Years of Charity</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-text">Projects Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-text">Happy Children</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Values</h2>
+                        <p><strong>Passion:</strong> Our team is passionate about making a positive impact on the needy children of Uganda."
+.</p>
+                        <p><strong>Excellence:</strong> We are committed to delivering Every donation to our children.</p>
+                        <p><strong>Collaboration:</strong> We work closely worked with several sponors, these have ensured a smooth running of our activities.</p>
+                        <p><strong>Trustworthy:</strong> We have been trusted by differnt organisations to deliver their donations for years.</p>
+                        <p><strong>Growth:</strong> Our organisation is growing each day and the number of children we are looking at is increasing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Reach out to us for inquiries, quotes, or to discuss your next project.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="map-container">
+                        
+
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.4877922113008!2d32.64343758962377!3d0.30781631310063096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbeb0b2b6c813%3A0x9e2fa180017e37b6!2s13b%20Sepiriya%20Mukasa%20Cl%2C%20Kampala!5e1!3m2!1sen!2sug!4v1758233505294!5m2!1sen!2sug"
+ width="700" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Our Address</h3>
+                        <p>main street, Mityana District</p>
+                        <p> wabigalo</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <i class="fas fa-phone" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Phone Number</h3>
+                        <p>+256 701169202</p>
+                        <p>+256 756327715</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <i class="fas fa-envelope" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Email Address</h3>
+                        <p>bornofchrist@support.com</p>
+                        <p>support@bornofchrist.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Portfolio Page -->
+    <div id="portfolio" class="page">
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Achivements</h2>
+                    <p>Explore some of our recent Achivements and Projects.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img" style="background-color: #4de4d7;">
+                            <i class="fas fashopping-cart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>we have re-settled mark</h3>
+                            <p>A.</p>
+                            <a href="#contact" class="btn">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img" style="background-color: #10b981;">
+                            <i class="fas famobile-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>We taken Joan to school</h3>
+                            <p>A.</p>
+                            <a href="#contact" class="btn">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img" style="background-color: #61e9f3;">
+                            <i class="fas fachart-line"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>we have provided food to families</h3>
+                            <p>A.</p>
+                            <a href="#contact" class="btn">View Case Study</a>
+                        </div>
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Follow us</h3>
+                    <p>Stay connected with our
+                         work and see updates on the children
+                          we shall also keep in touch with you so
+                           that we can pull a hand of these children to a 
+                           better vision, and make them strong citizens for
+                           
+                           the next generation . think you for the love that 
+                           you have shown to us and we really appriciate
+                         for the donations we have reciven 
+                         from you that have kept us moving till now😍😍</p>
+                    <div class="social-links">
+                        <a href="https://wa.link/jvftf1"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@bornofchristchildren?_t=ZS-8zsWdUm69fl&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/born-of-christ-children-bb6053386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bornofchristcharity?igsh=MWs4enp2YnJlbHZtdw=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">our children</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Archivements</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our children</h3>
+                    <ul>
+                        <li><a href="#services">sarah</a></li>
+                        <li><a href="#services">michael</a></li>
+                        <li><a href="#services">Grace</a></li>
+                        <li><a href="#services">David</a></li>
+                        <li><a href="#services">sophia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> main street, CA</li>
+                        <li><i class="fas fa-phone"></i> +256 701169202</li>
+                        <li><i class="fas fa-envelope"></i> info@bornofchrist.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 born of christ. All rights reserved.</p>
+                <P>&star; Designed by Tugume frank</P>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation and Page Switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.getElementById('nav');
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Update active navigation link
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Show the target page
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                        if (page.id === targetId) {
+                            page.classList.add('active');
+                        }
+                    });
+                    
+                    // Close mobile menu if open
+                    nav.classList.remove('show');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.classList.toggle('show');
+            });
+            
+            // Contact form handling
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simple validation
+                    if (name && email && subject && message) {
+                        // In a real application, you would send this data to a server
+                        alert('Thank you for your message! We will get back to you soon.');
+                        contactForm.reset();
+                    } else {
+                        alert('Please fill in all fields.');
+                    }
+                });
+            }
+            
+            // Simulated map loading
+            const map = document.getElementById('map');
+            if (map) {
+                // In a real application, you would initialize a map here
+                // This is just a placeholder simulation
+                setTimeout(() => {
+                    map.innerHTML = `
+                        <div style="padding: 1rem; text-align: center;">
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3>Map Location</h3>
+                            <p>123 Tech Avenue, San Francisco, CA</p>
+                            <p>Interactive map would be displayed here with API integration</p>
+                        </div>
+                    `;
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>born of christ| Making Dreams Come True</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #4a89dc;
+            --secondary: #5d9cec;
+            --accent: #ff7e90;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --success: #48cfad;
+        }
+
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var#af9e9e, var(#a09595));
+            color: rgb(36, 39, 235);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(41, 39, 39, 0.815);
+              text-shadow: 0 2px 10px rgba(41, 39, 39, 0.815);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: rgb(12, 12, 14);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .donate-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.911);
+        }
+
+        .donate-btn:hover {
+            background-color: #ffe600;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.897);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Child Story Section */
+        .child-story {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            font-size: 2.5rem;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .child-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .child-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .child-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .child-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .child-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .child-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .child-details p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-box h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-box h4 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        /* Media Gallery */
+        .media-gallery {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .media-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-item img,
+        .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .media-item:hover img,
+        .media-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .media-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .media-item:hover .media-caption {
+            transform: translateY(0);
+        }
+
+        /* Donation Section */
+        .donation {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .donation h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .donation p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+
+        .donation-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .amount-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .amount-option {
+            padding: 1rem 1.5rem;
+            background-color: var(--light);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .amount-option:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .amount-option.selected {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .custom-amount {
+            padding: 1rem;
+            border: 2px solid var(--light);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .footer-section p {
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .child-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="shortcut icon" type="image/png" href="favicon/Charity Foundation Logo in Simple Modern Style.png" >
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="link tree/logo/Charity Foundation Logo in Simple Modern Style.png">
+                <span> <strong>Born of christ children foundation</strong></span>
+            </div>
+            <ul class="nav-links">
+                
+            </ul>
+            <a href="link tree/link tree.html" class="donate-btn">Donate Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Change sophia's Life Today</h1>
+            <p>Your donation can make dreams come true for children in need</p>
+            <a href="link tree/link tree.html" class="donate-btn">Make a Difference</a>
+        </div>
+    </section>
+
+    <!-- Child Story Section -->
+    <section class="child-story">
+        <h2 class="section-title">Meet <span>Sophia</span></h2>
+        <div class="child-container">
+            <div class="child-image">
+                <img src="sophia/sarah.jpg" alt="Sophia - A child in need">
+            </div>
+            <div class="child-details">
+                <h3>About Sophia</h3>
+                <p>Sophia is a bright 8-year-old girl from a small village who dreams of becoming a doctor. Despite facing numerous challenges in her young life, she remains hopeful and dedicated to her studies.</p>
+                
+                <div class="info-box">
+                    <h4><i class="fas fa-heart"></i> Her Dreams</h4>
+                    <p>Sophia dreams of becoming a doctor to help others in her community. She wants to build a clinic in her village where everyone can receive medical care regardless of their financial situation.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4><i class="fas fa-home"></i> Her Background</h4>
+                    <p>Sophia lives with her grandmother in a small house with no running water. Her parents passed away when she was young, and her grandmother struggles to make ends meet with her small farm.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4><i class="fas fa-hands-helping"></i> Her Needs</h4>
+                    <p>Sophia needs support for her education, including school supplies, uniforms, and tuition. She also needs access to better nutrition and healthcare to help her thrive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery -->
+    <section class="media-gallery">
+        <h2 class="section-title">Sophia's <span>Journey</span></h2>
+        <div class="gallery-container">
+            <div class="media-grid">
+                <div class="media-item">
+                    <img src="sophia/james.jpg" alt="Sophia studying">
+                    <div class="media-caption">Sophia studying for her classes</div>
+                </div>
+                <div class="media-item">
+                    <video controls poster="link tree/logo/Pink Black Photocentric Neon Tech Talk Podcast Instagram Post.mp4">
+                        <source src="#" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="media-caption">A day in Sophia's life</div>
+                </div>
+                <div class="media-item">
+                    <img src="link tree/logo/food.jpg" alt="Sophia's village">
+                    <div class="media-caption">The village where Sophia lives</div>
+                </div>
+                <div class="media-item">
+                    <video controls poster="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">
+                        <source src="#" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="media-caption">Sophia's interview about her dreams</div>
+                </div>
+                <div class="media-item">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Children in school">
+                    <div class="media-caption">Sophia with her classmates</div>
+                </div>
+                <div class="media-item">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="School supplies">
+                    <div class="media-caption">Sophia's school supplies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation">
+        <h2>Help Make Sophia's Dreams Come True</h2>
+        <p>Your donation will provide Sophia with education, healthcare, and the opportunity to build a better future for herself and her community.</p>
+        
+        <div class="donation-box">
+            <h3>Select an amount to donate</h3>
+            <div class="amount-options">
+                <div class="amount-option">$25</div>
+                <div class="amount-option">$50</div>
+                <div class="amount-option selected">$100</div>
+                <div class="amount-option">$250</div>
+                <div class="amount-option">$500</div>
+            </div>
+            <input type="text" class="custom-amount" placeholder="Or enter custom amount">
+            <a href="link tree/link tree.html" class="donate-btn">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hope For Children</h3>
+                <p>Making a difference in children's lives since 2016</p>
+                <p>Registered Charity #: 12345-6789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Charity Avenue, Hope City</p>
+                <p><i class="fas fa-phone"></i> +256 701169202</p>
+                <p><i class="fas fa-envelope"></i> info@bornofchrist.org</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://wa.link/jvftf1"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@bornofchristchildren?_t=ZS-8zsWdUm69fl&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/born-of-christ-children-bb6053386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bornofchristcharity?igsh=MWs4enp2YnJlbHZtdw=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Hope For Children. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for donation amount selection
+        document.querySelectorAll('.amount-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.amount-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Donation button functionality
+        document.querySelectorAll('.donate-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Thank you for your donation! You will be redirected to our secure payment portal.');
+                // In a real implementation, this would link to a payment processor
+            });
+        });
+    </script>
+</body>
+</html>

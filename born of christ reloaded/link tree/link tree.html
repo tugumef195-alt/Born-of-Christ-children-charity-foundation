@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Born of Christ Children Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff9e6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #40c5fa 0%, #1014ff 100%);
+            color: white;
+            padding: 1.1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 6.5rem;
+            color: #fffb00;
+             box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+        
+        h1 {
+        
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: #f3d425f8;
+            padding: 0.8rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: rgb(231, 231, 231);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #da16b9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #2980b9;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #ffd700);
+            border-radius: 2px;
+        }
+        
+        .children-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 2rem;
+        }
+        
+        h2{
+             text-shadow:3px 3px 4px rgba(0, 0, 0, 0.7) ;
+        }
+        .child-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .child-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .child-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 4px solid #3498db;
+        }
+        
+        .child-info {
+            padding: 6px;
+        }
+        
+        .child-name {
+            font-size: 1.3rem;
+            color: #2980b9;
+            margin-bottom: 8px;
+        }
+        
+        .child-age {
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 0px;
+        }
+        
+        .child-brief {
+            color: #eed9d9;
+            margin-bottom: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+        
+        .donate-btn {
+            display: block;
+            width: 100%;
+            box-shadow:3px 3px 6px rgba(0, 0, 0, 0.9) ;
+            padding: 10px;
+            background: linear-gradient(135deg, #77adeb 0%, #001aff 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: center;
+            text-decoration: none;
+
+        }
+        
+        .donate-btn:hover {
+              text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9) ;
+            background: linear-gradient(135deg, #1338b3 0%, #27ae60 100%);
+        }
+        
+        .child-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: 3px 3px 5px rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: rgb(240, 229, 235);
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFade 0.5s;
+        }
+        
+        @keyframes modalFade {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #3210af 0%, #4fb2f5 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .close-btn {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-btn:hover {
+            color: #00ff2a;
+        }
+        
+        .modal-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .modal-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .modal-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .detail-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            color: #2980b9;
+            margin-bottom: 8px;
+        }
+        
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 40px 0;
+        }
+        
+        .about-text {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .mission, .vision {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 5px solid #3498db;
+        }
+        
+        .mission h3, .vision h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ffd700;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #00ff9d;
+            color: #1a5276;
+            transform: translateY(-3px);
+        }
+        
+        .quick-links ul {
+            list-style: none;
+        }
+        
+        .quick-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .quick-links ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .quick-links ul li a:hover {
+            color: #ffd700;
+        }
+        
+
+
+
+
+ .mission-values {
+            display: grid;
+            color: #2549c0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mission-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(9, 11, 19, 0.993);
+            text-align: center;
+        }
+        
+        .mission-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+
+h1{
+    font-size: 4.1rem;
+      text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        @media (max-width: 868px) {
+            .modal-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+
+    <link rel="shortcut icon" type="image/png" href="logo/demo-17582381 (1).png" >
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            
+
+
+
+             <img src="logo/demo-17582381 (1).png" >
+                
+            
+
+
+
+
+
+
+            <div>
+                <h1>Donation Link Tree</h1>
+                <p class="tagline">Bringing hope and opportunity to children in need</p>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h2 class="section-title">Donation Options</h2>
+          
+        </section>
+        
+        <!-- Children Grid Section -->
+        <section id="children">
+        
+            <div class="children-grid">
+                <!-- Child 1 -->
+                <div class="child-card" onclick="openModal('modal1')">
+                    <img src="data:image/webp;base64,UklGRgAEAABXRUJQVlA4IPQDAAAwHQCdASrIALQAPp1Mo0ylpCMiI5D5KLATiWVu4W2uKxmmyAfP/hOU06r/Lfv/w/qk21HmM84DTXKef8u73b3itFlgaWKZl5G3u/oAfqAMCL5A4FRhnsre+VujXV/Vy9Eux2M9mc0oZLfbm0v70q8HNr4bcKP0WjSNc9lU0IjV/7/aU3ItQoyIVS+7HTzAU0MlyLPp80sfAnsCxejo9qeoE7FnjUoOjUIdK7nyatqEab2y+MdY1GxNKUMEuyDaGDV+mw3pOnOWTL8mwmsCoi+/q7oex1xuMo+g8V/oGGeyvABLdGusGeyt75W0RBIJBIJAAAD+12l//D39EvHnUV/m1scc3ThcAZgTgB5xIcismqflndYBwnbn9BsUqzs39ItfRs6D9/dtANt3xACK4NemCyVlGC1MAQM1sQFw7RKhhsOHz/YQDZ0pqcwJwAAEuWqpDpjUAxHVJg6ypIn07ldGR/FZbowqvCUa6EojSvdKpjFn/YSBJMOz0ufvJ5wTAASU9+gIaWK+wu6Zk07666Y9z7o9osocobzOM2j0s5ZbUSPhJFetvprbzhAXsA0q8OYaAQLEkehgN+GFsIS+oc+4rNFV/5f4YEOObQ6fKgpI0FC7f3JEZoi9JWqA/L2eVESZc6PpuKf+tTZvAFWHpLk5nOSQ6YyLBV1dRe1eIYATTd4CN2KokN59gxxNtMASntLhs5YrHyZ9dkJ+4t1n9AbHEE93vyyrAjru5MCV4HkixMlt01G3R271nEpxwmG2X3OSEZmtCUznfp5jMTyab19s0WXBMQQlaAyF/vNC0alLcjQuy/NhKv6ABmFcmUbO59ixvvKipuPqMvLBDMcp7l2oVHNbuxvT/nUJG3gsn8MSrgtXCOsLxTW3MMAGMoLAPkqpn5lVd+Y4mbA5wsr1BIfW40o1kQaNZRODpknQ3SdljtiVevLGkxo2IbmLEVdwao17je27CBFWAOQRfrijGtYWXaSo/qIB6Qj1Yjp1zej7rftkcUiDKwWoEsQJ5xLaw/2YNsd7eBDRFqR61l6CMTrrCNDSoXPttg4nCXZDfVU8xeJkYJkhh+j0oU8vgP1uf603DLlXBl+oIUXjcxYB26oBGZV2Kw/b6/76rd9fiwqq6bndTUy5oG8FsZFQEfjLUCnUtyGm0vTuiKhVQM+e/M38567NgV593yHdoJ+TmOUR+W4e0T8fUOfyY/K/kX8sMhKtYYLAue/7HpUoZehjAgcqhh4J9c3GbgqpE5kA16dMFEv5M/267KqHFyTPBEikpSIbps6RFAOX5gsW40pILPwDv28am+/SNM41YtVXZRrDeFf441wv3wLWolt2AAAFTmwAAAAA" alt="Paypal" class="child-image">
+                    <div class="child-info">
+                        <h3 class="child-name"></h3>
+                        <p class="child-age"></p>
+                        <p class="child-brief">.</p>
+                         <a class="donate-btn">Use Paypal</a>
+                    </div>
+                </div>
+                
+                <!-- Child 2 -->
+                <div class="child-card" onclick="openModal('modal2')">
+                    <img src="https://play-lh.googleusercontent.com/xIrqNVZHgYYFAVFgPQPQ_Bbr9pRG1URlQAJl6KRa1ROA8Qd-rK1Lb-9pe_Gytf2xrb8" alt="worldrimit" class="child-image">
+                    <div class="child-info">
+                        <h3 class="child-name"></h3>
+                        <p class="child-age"></p>
+                        <p class="child-brief"></p>
+                        <a class="donate-btn">Use  Worldrimit</a>
+                    </div>
+                </div>
+                
+                <!-- Child 3 -->
+                <div class="child-card" onclick="openModal('modal3')">
+                    <img src="https://i.pinimg.com/originals/af/a4/da/afa4da206866e2a71633bc0ade1aa597.jpg" alt="Gofundme" class="child-image">
+                    <div class="child-info">
+                        <h3 class="child-name"></h3>
+                        <p class="child-age"></p>
+                        <p class="child-brief"></p>
+                        <a class="donate-btn">Use Gofund</a>
+                    </div>
+                </div>
+                
+                <!-- Child 4 -->
+                <div class="child-card" onclick="openModal('modal4')">
+                    <img src="https://c8.alamy.com/comp/2CGDFMC/western-union-2CGDFMC.jpg" alt="credit card" class="child-image">
+                    <div class="child-info">
+                       <h3 class="child-name"></h3>
+                        <p class="child-age"></p>
+                        <p class="child-brief"></p>
+                        <a class="donate-btn">Use Western Union</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Additional children would follow the same pattern -->
+                <!-- For brevity, I'll include 4 modals and mention that there would be 20 -->
+            </div>
+        </section>
+      
+    <!-- Child Modals -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="child-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Paypal</h2>
+                <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="https://tse1.explicit.bing.net/th/id/OIP.l48rBEhpFD1TeiN1ChOlpgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sarah" class="modal-image">
+                <div class="modal-details">
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 1</h3>
+                        <p><strong>.:</strong> </p>
+                        <p><strong>.:</strong> </p>
+                        <p><strong>.:</strong> </p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 2</h3>
+                        <p></p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 3</h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 4</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <a class="donate-btn">Donate to Support us</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div id="modal2" class="child-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>worldrimit</h2>
+                <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="https://www.valoraanalitik.com/wp-content/uploads/2022/08/worldremit.jpg" alt="worldrimit" class="modal-image">
+                <div class="modal-details">
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 1</h3>
+                        <p><strong>:</strong> </p>
+                        <p><strong>-</strong></p>
+                        <p><strong>:</strong> </p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 4</h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 5</h3>
+                        <p></p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">Dreams</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <a class="donate-btn">Donate to Support us</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal3" class="child-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Gofundme</h2>
+                <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="https://averysangels.org/wp-content/uploads/2014/04/gofundme.jpg" alt="Gofund" class="modal-image">
+                <div class="modal-details">
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 1</h3>
+                        <p><strong>:</strong> </p>
+                        <p><strong>:</strong> </p>
+                        <p><strong>:</strong> </p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title"></h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 3</h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 4</h3>
+                        <p>.</p>
+                    </div>
+                </div>
+                <a class="donate-btn">Donate to Support us</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 4 -->
+    <div id="modal4" class="child-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Western union</h2>
+                <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="https://philnews.ph/wp-content/uploads/2019/03/Western-Union-Money-Transfer.jpg" alt="credtcard" class="modal-image">
+                <div class="modal-details">
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 1</h3>
+                        <p><strong>:</strong> </p>
+                        <p><strong>:</strong> </p>
+                        <p><strong>:</strong> </p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 2</h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 3</h3>
+                        <p>.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-title">step 4</h3>
+                        <p>.</p>
+                    </div>
+                </div>
+                <a class="donate-btn">Donate to Support us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+ 
+    
+    <script>
+        // Function to open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Function to close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside of modal content
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('child-modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .quick-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                             top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+       });
+    </script>
+</body>
+</html>
